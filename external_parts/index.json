@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "required_fields": [
+    "source",
+    "source_url",
+    "license",
+    "author",
+    "download_url",
+    "tags",
+    "bounding_box"
+  ],
+  "items": []
+}
