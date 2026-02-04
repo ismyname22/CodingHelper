@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import List
 
-from project_spec import ProjectSpec
+from core.schema import ProjectSpec
 from validation.rules import ValidationIssue, validate
 
 

@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Dict, List, Optional, Tuple
 
-from project_spec import ComponentSpec, Dimensions, ProjectSpec, ScrewHoleSpec
+from core.schema import ComponentSpec, Dimensions, ProjectSpec, ScrewHoleSpec
 
 
 @dataclass(frozen=True)

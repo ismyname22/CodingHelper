@@ -6,11 +6,11 @@
 - Basis-Tests decken Anchor-Generierung und Alignment ab.
 
 ## Offene Aufgaben (TODO)
-1. **Doppelte Spezifikationsmodelle konsolidieren**
+1. **Doppelte Spezifikationsmodelle konsolidieren** ✅
    - `project_spec.py` und `core/schema.py` überschneiden sich in der Domänenmodellierung.
-   - Entscheiden, welche Quelle kanonisch ist und die andere entfernen oder migrieren.
+   - Kanonisches Modell: `core/schema.py` (Migration abgeschlossen).
 
-2. **Pipeline-Validierung testen**
+2. **Pipeline-Validierung testen** ✅
    - Tests für `conversation_to_spec`, `validate_spec` und `spec_to_geometry` ergänzen,
      inkl. Fehlerfällen (leere Konversation, negative Maße, unbekannte Shapes).
 
@@ -18,7 +18,7 @@
    - Aktuell ist `export_component_to_cad` ein Platzhalter.
    - Ziel definieren (z. B. konkretes Exportformat) und Implementierung ergänzen.
 
-4. **Dokumentation & Beispiele ergänzen**
+4. **Dokumentation & Beispiele ergänzen** ✅
    - Minimaler README mit Quickstart, Beispielen für Anchor-Workflow und Pipeline-Nutzung.
    - Beispielskript in `scripts/` für einen End-to-End-Flow.
 

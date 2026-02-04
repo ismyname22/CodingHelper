@@ -8,25 +8,31 @@ from uuid import UUID, uuid4
 
 
 @dataclass(frozen=True)
-class ProjectSpec:
-    """High-level project definition."""
+class Dimensions:
+    width: float
+    depth: float
+    height: float
 
-    id: UUID = field(default_factory=uuid4)
-    project_type: str = ""
-    dimensions_mm: Dict[str, float] = field(default_factory=dict)
-    tolerances_mm: Dict[str, float] = field(default_factory=dict)
-    target_material: str = ""
+
+@dataclass(frozen=True)
+class ScrewHoleSpec:
+    diameter: float
+    distance_to_edge: float
 
 
 @dataclass(frozen=True)
 class ComponentSpec:
-    """Specification for a single component or standard part."""
+    kind: str
+    clearance: Optional[Dimensions] = None
 
-    id: UUID = field(default_factory=uuid4)
-    component_type: str = ""
-    standard_part_id: Optional[str] = None
-    manufacturer_specs: Dict[str, str] = field(default_factory=dict)
-    footprint: Dict[str, float] = field(default_factory=dict)
+
+@dataclass(frozen=True)
+class ProjectSpec:
+    material: Optional[str] = None
+    wall_thickness: Optional[float] = None
+    enclosure_inner: Optional[Dimensions] = None
+    screw_holes: List[ScrewHoleSpec] = field(default_factory=list)
+    components: List[ComponentSpec] = field(default_factory=list)
 
 
 @dataclass(frozen=True)
