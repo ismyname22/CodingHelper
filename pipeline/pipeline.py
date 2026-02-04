@@ -1,9 +1,10 @@
 from __future__ import annotations
 
 from dataclasses import asdict
-from typing import Any, Callable, Mapping
+from typing import Any, Callable, Mapping, TYPE_CHECKING
 
-import cadquery as cq
+if TYPE_CHECKING:
+    import cadquery as cq
 
 from pipeline.spec import Spec
 
@@ -38,8 +39,10 @@ def validate_spec(spec: Spec) -> Spec:
     return spec
 
 
-def spec_to_geometry(spec: Spec) -> cq.Workplane:
+def spec_to_geometry(spec: Spec) -> "cq.Workplane":
     """Deterministically convert a validated Spec into CadQuery geometry."""
+    import cadquery as cq
+
     if spec.shape == "box":
         return cq.Workplane("XY").box(spec.width, spec.depth, spec.height)
     if spec.shape == "cylinder":
@@ -56,4 +59,3 @@ def run_pipeline(
     spec = conversation_to_spec(conversation, llm_callable)
     validated = validate_spec(spec)
     return spec_to_geometry(validated)
-

@@ -3,7 +3,8 @@
 Dieser Plan teilt die offenen TODOs in klar abgegrenzte Rollen auf, damit mehrere
 Agenten parallel arbeiten können, ohne sich gegenseitig zu blockieren.
 
-## 1) Agent: Spec-Architekt
+## 1) Agent: Spec-Architekt ✅ (abgeschlossen)
+
 **Ziel:** Konsolidierung der doppelten Domänenmodelle (`project_spec.py` vs. `core/schema.py`).
 
 **Aufgaben**
@@ -16,7 +17,8 @@ Agenten parallel arbeiten können, ohne sich gegenseitig zu blockieren.
 - Konsolidiertes Datenmodell.
 - Migration-Notizen + ggf. Changelog-Eintrag.
 
-## 2) Agent: Pipeline-Tester
+## 2) Agent: Pipeline-Tester ✅ (abgeschlossen)
+
 **Ziel:** Stabiler Testumfang für die Pipeline-Validierung.
 
 **Aufgaben**
@@ -42,7 +44,8 @@ Agenten parallel arbeiten können, ohne sich gegenseitig zu blockieren.
 **Ergebnisse**
 - Nutzbare Exportfunktion mit dokumentiertem Verhalten.
 
-## 4) Agent: Docs & Examples
+## 4) Agent: Docs & Examples ✅ (abgeschlossen)
+
 **Ziel:** Dokumentation & Beispiele für Onboarding.
 
 **Aufgaben**
