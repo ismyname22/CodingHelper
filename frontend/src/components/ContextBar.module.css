@@ -1,0 +1,39 @@
+.contextBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: var(--color-card);
+  border: 1px solid var(--color-card-border);
+}
+
+.eyebrow {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+  margin-bottom: 4px;
+}
+
+.statusGroup {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.badge,
+.badgeMuted {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--color-accent);
+}
+
+.badgeMuted {
+  background: rgba(148, 163, 184, 0.2);
+  color: var(--color-muted);
+}
