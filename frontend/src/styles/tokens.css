@@ -1,0 +1,17 @@
+:root {
+  color-scheme: light;
+  --color-surface: #f5f7fb;
+  --color-sidebar: #111827;
+  --color-text: #0f172a;
+  --color-muted: #64748b;
+  --color-border: #e2e8f0;
+  --color-accent: #2563eb;
+  --color-accent-contrast: #ffffff;
+  --color-success: #22c55e;
+  --color-chip: #e2e8f0;
+  --color-card: #ffffff;
+  --color-card-border: #e5e7eb;
+  --color-warning: #fbbf24;
+  --color-danger: #f97316;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
